@@ -1,0 +1,1252 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb",
+    "__original-animation-3.cconb",
+    "__original-animation-4.cconb",
+    "__original-animation-5.cconb",
+    "__original-animation-6.cconb",
+    "__original-animation-8.cconb",
+    "__original-animation-7.cconb",
+    "__original-animation-9.cconb",
+    "__original-animation-10.cconb",
+    "__original-animation-11.cconb",
+    "__original-animation-12.cconb",
+    "__original-animation-13.cconb",
+    "__original-animation-15.cconb",
+    "__original-animation-14.cconb",
+    "__original-animation-16.cconb",
+    "__original-animation-17.cconb",
+    "__original-animation-18.cconb",
+    "__original-animation-19.cconb",
+    "__original-animation-20.cconb",
+    "__original-animation-21.cconb",
+    "__original-animation-22.cconb",
+    "__original-animation-23.cconb",
+    "__original-animation-25.cconb",
+    "__original-animation-26.cconb",
+    "__original-animation-24.cconb"
+  ],
+  "subMetas": {
+    "57146": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@57146",
+      "displayName": "",
+      "id": "57146",
+      "name": "Walk.animation",
+      "userData": {
+        "gltfIndex": 25,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": [],
+        "speed": 1
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "cff93": {
+      "importer": "gltf-mesh",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@cff93",
+      "displayName": "",
+      "id": "cff93",
+      "name": "Char_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2696": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@c2696",
+      "displayName": "",
+      "id": "c2696",
+      "name": "Idle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "ca7e4": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@ca7e4",
+      "displayName": "",
+      "id": "ca7e4",
+      "name": "Death.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 3.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "af7bf": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@af7bf",
+      "displayName": "",
+      "id": "af7bf",
+      "name": "Defend.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "c0f7d": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@c0f7d",
+      "displayName": "",
+      "id": "c0f7d",
+      "name": "FallDown.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "5bbb7": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@5bbb7",
+      "displayName": "",
+      "id": "5bbb7",
+      "name": "FireGun.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "903c4": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@903c4",
+      "displayName": "",
+      "id": "903c4",
+      "name": "GroundKick.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.100000023841858
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "7f40e": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@7f40e",
+      "displayName": "",
+      "id": "7f40e",
+      "name": "GroundPunch.animation",
+      "userData": {
+        "gltfIndex": 6,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.8666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "9a64d": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@9a64d",
+      "displayName": "",
+      "id": "9a64d",
+      "name": "Hit1.animation",
+      "userData": {
+        "gltfIndex": 7,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "09a76": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@09a76",
+      "displayName": "",
+      "id": "09a76",
+      "name": "Hit2.animation",
+      "userData": {
+        "gltfIndex": 8,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "4cf9e": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@4cf9e",
+      "displayName": "",
+      "id": "4cf9e",
+      "name": "JumpKick.animation",
+      "userData": {
+        "gltfIndex": 9,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.8666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "3965f": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@3965f",
+      "displayName": "",
+      "id": "3965f",
+      "name": "JumpUp.animation",
+      "userData": {
+        "gltfIndex": 10,
+        "wrapMode": 1,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.4333333373069763
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "5d89e": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@5d89e",
+      "displayName": "",
+      "id": "5d89e",
+      "name": "Kick1.animation",
+      "userData": {
+        "gltfIndex": 11,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "cd8b9": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@cd8b9",
+      "displayName": "",
+      "id": "cd8b9",
+      "name": "Kick2.animation",
+      "userData": {
+        "gltfIndex": 12,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7333333492279053
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "e70b9": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@e70b9",
+      "displayName": "",
+      "id": "e70b9",
+      "name": "KnockDown_Down.animation",
+      "userData": {
+        "gltfIndex": 13,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.4000000059604645
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "1cced": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@1cced",
+      "displayName": "",
+      "id": "1cced",
+      "name": "KnockDown_End.animation",
+      "userData": {
+        "gltfIndex": 14,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.8999999761581421
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "caf49": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@caf49",
+      "displayName": "",
+      "id": "caf49",
+      "name": "KnockDown_Up.animation",
+      "userData": {
+        "gltfIndex": 15,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.4333333373069763
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "1cb77": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@1cb77",
+      "displayName": "",
+      "id": "1cb77",
+      "name": "Land.animation",
+      "userData": {
+        "gltfIndex": 16,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "eb0d8": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@eb0d8",
+      "displayName": "",
+      "id": "eb0d8",
+      "name": "Pickup.animation",
+      "userData": {
+        "gltfIndex": 17,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5666666626930237
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "5f145": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@5f145",
+      "displayName": "",
+      "id": "5f145",
+      "name": "Punch1.animation",
+      "userData": {
+        "gltfIndex": 18,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.30000001192092896
+        },
+        "events": [
+          {
+            "frame": 0.16666666666666666,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.16666666666666666,
+            "func": "checkForHit",
+            "params": []
+          }
+        ],
+        "speed": 1
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "05040": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@05040",
+      "displayName": "",
+      "id": "05040",
+      "name": "Punch2.animation",
+      "userData": {
+        "gltfIndex": 19,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.3333333432674408
+        },
+        "events": [
+          {
+            "frame": 0.06666666666666667,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.06666666666666667,
+            "func": "playAudio",
+            "params": [
+              "whoosh"
+            ]
+          },
+          {
+            "frame": 0.16666666666666666,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.16666666666666666,
+            "func": "addForce",
+            "params": [
+              2
+            ]
+          },
+          {
+            "frame": 0.2,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.5,
+            "func": "",
+            "params": []
+          }
+        ],
+        "speed": 1
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "24e5b": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@24e5b",
+      "displayName": "",
+      "id": "24e5b",
+      "name": "Punch3.animation",
+      "userData": {
+        "gltfIndex": 20,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5666666626930237
+        },
+        "events": [
+          {
+            "frame": 0.03333333333333333,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.03333333333333333,
+            "func": "playAudio",
+            "params": [
+              "whoosh"
+            ]
+          },
+          {
+            "frame": 0.06666666666666667,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.06666666666666667,
+            "func": "addForce",
+            "params": [
+              3
+            ]
+          },
+          {
+            "frame": 0.1,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.1,
+            "func": "checkForHit",
+            "params": []
+          },
+          {
+            "frame": 0.5333333333333333,
+            "func": "",
+            "params": []
+          }
+        ],
+        "speed": 1
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "2746f": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@2746f",
+      "displayName": "",
+      "id": "2746f",
+      "name": "PunchRootMotion.animation",
+      "userData": {
+        "gltfIndex": 21,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "9292d": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@9292d",
+      "displayName": "",
+      "id": "9292d",
+      "name": "Run.animation",
+      "userData": {
+        "gltfIndex": 22,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7666666507720947
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "400b1": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@400b1",
+      "displayName": "",
+      "id": "400b1",
+      "name": "StandUp.animation",
+      "userData": {
+        "gltfIndex": 23,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "8ea37": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@8ea37",
+      "displayName": "",
+      "id": "8ea37",
+      "name": "SwingWeapon.animation",
+      "userData": {
+        "gltfIndex": 24,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "58f48": {
+      "importer": "gltf-animation",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@58f48",
+      "displayName": "",
+      "id": "58f48",
+      "name": "ThrowWeapon.animation",
+      "userData": {
+        "gltfIndex": 26,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 58
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4d743": {
+      "importer": "gltf-scene",
+      "uuid": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@4d743",
+      "displayName": "",
+      "id": "4d743",
+      "name": "player1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "Idle",
+        "duration": 2,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Idle",
+            "from": 0,
+            "to": 2,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Death",
+        "duration": 3.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Death",
+            "from": 0,
+            "to": 3.366666555404663,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Defend",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Defend",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "FallDown",
+        "duration": 0.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "FallDown",
+            "from": 0,
+            "to": 0.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "FireGun",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "FireGun",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "GroundKick",
+        "duration": 1.100000023841858,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "GroundKick",
+            "from": 0,
+            "to": 1.100000023841858,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "GroundPunch",
+        "duration": 0.8666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "GroundPunch",
+            "from": 0,
+            "to": 0.8666666746139526,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Hit1",
+        "duration": 0.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Hit1",
+            "from": 0,
+            "to": 0.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Hit2",
+        "duration": 0.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Hit2",
+            "from": 0,
+            "to": 0.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "JumpKick",
+        "duration": 0.8666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "JumpKick",
+            "from": 0,
+            "to": 0.8666666746139526,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "JumpUp",
+        "duration": 0.4333333373069763,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "JumpUp",
+            "from": 0,
+            "to": 0.4333333373069763,
+            "wrapMode": 1
+          }
+        ]
+      },
+      {
+        "name": "Kick1",
+        "duration": 0.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Kick1",
+            "from": 0,
+            "to": 0.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Kick2",
+        "duration": 0.7333333492279053,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Kick2",
+            "from": 0,
+            "to": 0.7333333492279053,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "KnockDown_Down",
+        "duration": 0.4000000059604645,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "KnockDown_Down",
+            "from": 0,
+            "to": 0.4000000059604645,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "KnockDown_End",
+        "duration": 0.8999999761581421,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "KnockDown_End",
+            "from": 0,
+            "to": 0.8999999761581421,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "KnockDown_Up",
+        "duration": 0.4333333373069763,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "KnockDown_Up",
+            "from": 0,
+            "to": 0.4333333373069763,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Land",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Land",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Pickup",
+        "duration": 0.5666666626930237,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Pickup",
+            "from": 0,
+            "to": 0.5666666626930237,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Punch1",
+        "duration": 0.30000001192092896,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Punch1",
+            "from": 0,
+            "to": 0.30000001192092896,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Punch2",
+        "duration": 0.3333333432674408,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Punch2",
+            "from": 0,
+            "to": 0.3333333432674408,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Punch3",
+        "duration": 0.5666666626930237,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Punch3",
+            "from": 0,
+            "to": 0.5666666626930237,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "PunchRootMotion",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "PunchRootMotion",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Run",
+        "duration": 0.7666666507720947,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Run",
+            "from": 0,
+            "to": 0.7666666507720947,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "StandUp",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StandUp",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "SwingWeapon",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "SwingWeapon",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Walk",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Walk",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2,
+            "speed": 1
+          }
+        ]
+      },
+      {
+        "name": "ThrowWeapon",
+        "duration": 0.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "ThrowWeapon",
+            "from": 0,
+            "to": 0.5,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "8c89a8c6-37ba-4161-bf69-5b6367b630ce@4d743",
+    "assetFinder": {
+      "meshes": [
+        "8c89a8c6-37ba-4161-bf69-5b6367b630ce@cff93"
+      ],
+      "skeletons": [
+        "8c89a8c6-37ba-4161-bf69-5b6367b630ce@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "8c89a8c6-37ba-4161-bf69-5b6367b630ce@2deab"
+      ],
+      "scenes": [
+        "8c89a8c6-37ba-4161-bf69-5b6367b630ce@4d743"
+      ]
+    },
+    "materials": {
+      "8c89a8c6-37ba-4161-bf69-5b6367b630ce@2deab": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_NORMAL_MAP": true,
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "e3ef8997-9c30-4587-87e6-a326212a912a@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            },
+            "normalMap": {
+              "__uuid__": "92a83a9a-5462-46b0-94bf-3b11454d5da1@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      }
+    }
+  }
+}

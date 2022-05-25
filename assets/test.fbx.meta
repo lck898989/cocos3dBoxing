@@ -1,0 +1,279 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb"
+  ],
+  "subMetas": {
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dd693": {
+      "importer": "gltf-animation",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@dd693",
+      "displayName": "",
+      "id": "dd693",
+      "name": "PlayerIdle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 13.333333015441895
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "cbc3f": {
+      "importer": "gltf-animation",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@cbc3f",
+      "displayName": "",
+      "id": "cbc3f",
+      "name": "PlayerRun.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6333333253860474
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 52
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fd73d": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@fd73d",
+      "displayName": "",
+      "id": "fd73d",
+      "name": "DiffuseColor_Texture.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f17a": {
+      "importer": "texture",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@4f17a",
+      "displayName": "",
+      "id": "4f17a",
+      "name": "DiffuseColor_Texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0d704636-ae05-48c5-a977-d49febd6acd0@fd73d"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "db478": {
+      "importer": "gltf-material",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@db478",
+      "displayName": "",
+      "id": "db478",
+      "name": "CustomerMaterial.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b2c6e": {
+      "importer": "gltf-scene",
+      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@b2c6e",
+      "displayName": "",
+      "id": "b2c6e",
+      "name": "test.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "DiffuseColor_Texture",
+        "uri": "0d704636-ae05-48c5-a977-d49febd6acd0@fd73d"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "PlayerIdle",
+        "duration": 13.333333015441895,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "PlayerIdle",
+            "from": 0,
+            "to": 13.333333015441895,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "PlayerRun",
+        "duration": 0.6333333253860474,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "PlayerRun",
+            "from": 0,
+            "to": 0.6333333253860474,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "0d704636-ae05-48c5-a977-d49febd6acd0@b2c6e",
+    "assetFinder": {
+      "meshes": [
+        "0d704636-ae05-48c5-a977-d49febd6acd0@a62fe"
+      ],
+      "skeletons": [
+        "0d704636-ae05-48c5-a977-d49febd6acd0@438fe"
+      ],
+      "textures": [
+        "0d704636-ae05-48c5-a977-d49febd6acd0@4f17a"
+      ],
+      "materials": [
+        "0d704636-ae05-48c5-a977-d49febd6acd0@db478"
+      ],
+      "scenes": [
+        "0d704636-ae05-48c5-a977-d49febd6acd0@b2c6e"
+      ]
+    },
+    "materials": {
+      "0d704636-ae05-48c5-a977-d49febd6acd0@db478": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "HAS_SECOND_UV": true,
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "1f221357-e307-45fa-8c35-a1e1013be828@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      }
+    }
+  }
+}

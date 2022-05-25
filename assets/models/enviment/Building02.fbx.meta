@@ -1,0 +1,136 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0c7081a7-914d-47f6-aa13-44bf93ceafe3",
+  "files": [],
+  "subMetas": {
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "0c7081a7-914d-47f6-aa13-44bf93ceafe3@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "0c7081a7-914d-47f6-aa13-44bf93ceafe3@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d2757": {
+      "importer": "gltf-scene",
+      "uuid": "0c7081a7-914d-47f6-aa13-44bf93ceafe3@d2757",
+      "displayName": "",
+      "id": "d2757",
+      "name": "Building02.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "0c7081a7-914d-47f6-aa13-44bf93ceafe3@d2757",
+    "assetFinder": {
+      "meshes": [
+        "0c7081a7-914d-47f6-aa13-44bf93ceafe3@a62fe"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "0c7081a7-914d-47f6-aa13-44bf93ceafe3@2deab"
+      ],
+      "scenes": [
+        "0c7081a7-914d-47f6-aa13-44bf93ceafe3@d2757"
+      ]
+    },
+    "materials": {
+      "0c7081a7-914d-47f6-aa13-44bf93ceafe3@2deab": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "HAS_SECOND_UV": true,
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "5cd0635d-c591-4462-89b1-0433e9213dea@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      }
+    }
+  }
+}

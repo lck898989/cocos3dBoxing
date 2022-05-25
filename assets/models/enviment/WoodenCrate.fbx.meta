@@ -1,0 +1,135 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "25190e77-c9a1-4dd4-a231-d270e26933b8",
+  "files": [],
+  "subMetas": {
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "25190e77-c9a1-4dd4-a231-d270e26933b8@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "25190e77-c9a1-4dd4-a231-d270e26933b8@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "69cc5": {
+      "importer": "gltf-scene",
+      "uuid": "25190e77-c9a1-4dd4-a231-d270e26933b8@69cc5",
+      "displayName": "",
+      "id": "69cc5",
+      "name": "WoodenCrate.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "25190e77-c9a1-4dd4-a231-d270e26933b8@69cc5",
+    "assetFinder": {
+      "meshes": [
+        "25190e77-c9a1-4dd4-a231-d270e26933b8@a62fe"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "25190e77-c9a1-4dd4-a231-d270e26933b8@2deab"
+      ],
+      "scenes": [
+        "25190e77-c9a1-4dd4-a231-d270e26933b8@69cc5"
+      ]
+    },
+    "materials": {
+      "25190e77-c9a1-4dd4-a231-d270e26933b8@2deab": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "2798f63f-b111-455f-aa2a-504822b98572@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      }
+    }
+  }
+}

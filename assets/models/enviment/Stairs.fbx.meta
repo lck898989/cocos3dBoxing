@@ -1,0 +1,135 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "d77f586d-fdd6-485c-83a8-14b3364cc1a7",
+  "files": [],
+  "subMetas": {
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "d77f586d-fdd6-485c-83a8-14b3364cc1a7@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "d77f586d-fdd6-485c-83a8-14b3364cc1a7@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cd0d0": {
+      "importer": "gltf-scene",
+      "uuid": "d77f586d-fdd6-485c-83a8-14b3364cc1a7@cd0d0",
+      "displayName": "",
+      "id": "cd0d0",
+      "name": "Stairs.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "d77f586d-fdd6-485c-83a8-14b3364cc1a7@cd0d0",
+    "assetFinder": {
+      "meshes": [
+        "d77f586d-fdd6-485c-83a8-14b3364cc1a7@a62fe"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "d77f586d-fdd6-485c-83a8-14b3364cc1a7@2deab"
+      ],
+      "scenes": [
+        "d77f586d-fdd6-485c-83a8-14b3364cc1a7@cd0d0"
+      ]
+    },
+    "materials": {
+      "d77f586d-fdd6-485c-83a8-14b3364cc1a7@2deab": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "8590ae68-85e0-4868-8e94-e808dbac6d3c@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      }
+    }
+  }
+}

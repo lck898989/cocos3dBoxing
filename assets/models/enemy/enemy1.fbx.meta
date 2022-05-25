@@ -1,0 +1,135 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0398f717-7097-4f94-ab42-31894127831b",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "46aa5": {
+      "importer": "gltf-mesh",
+      "uuid": "0398f717-7097-4f94-ab42-31894127831b@46aa5",
+      "displayName": "",
+      "id": "46aa5",
+      "name": "Char_Enemy1_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "be424": {
+      "importer": "gltf-animation",
+      "uuid": "0398f717-7097-4f94-ab42-31894127831b@be424",
+      "displayName": "",
+      "id": "be424",
+      "name": "Enemy1_Idle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "0398f717-7097-4f94-ab42-31894127831b@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 54
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "0398f717-7097-4f94-ab42-31894127831b@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7696f": {
+      "importer": "gltf-scene",
+      "uuid": "0398f717-7097-4f94-ab42-31894127831b@7696f",
+      "displayName": "",
+      "id": "7696f",
+      "name": "enemy1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "Enemy1_Idle",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Enemy1_Idle",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "0398f717-7097-4f94-ab42-31894127831b@7696f",
+    "assetFinder": {
+      "meshes": [
+        "0398f717-7097-4f94-ab42-31894127831b@46aa5"
+      ],
+      "skeletons": [
+        "0398f717-7097-4f94-ab42-31894127831b@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "0398f717-7097-4f94-ab42-31894127831b@2deab"
+      ],
+      "scenes": [
+        "0398f717-7097-4f94-ab42-31894127831b@7696f"
+      ]
+    }
+  }
+}

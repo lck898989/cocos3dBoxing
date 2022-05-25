@@ -1,0 +1,135 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "777cd9a2-8a6a-4eda-801e-f478c1cc5327",
+  "files": [],
+  "subMetas": {
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "777cd9a2-8a6a-4eda-801e-f478c1cc5327@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "777cd9a2-8a6a-4eda-801e-f478c1cc5327@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2d7ef": {
+      "importer": "gltf-scene",
+      "uuid": "777cd9a2-8a6a-4eda-801e-f478c1cc5327@2d7ef",
+      "displayName": "",
+      "id": "2d7ef",
+      "name": "DrumBarrel.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "777cd9a2-8a6a-4eda-801e-f478c1cc5327@2d7ef",
+    "assetFinder": {
+      "meshes": [
+        "777cd9a2-8a6a-4eda-801e-f478c1cc5327@a62fe"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "777cd9a2-8a6a-4eda-801e-f478c1cc5327@2deab"
+      ],
+      "scenes": [
+        "777cd9a2-8a6a-4eda-801e-f478c1cc5327@2d7ef"
+      ]
+    },
+    "materials": {
+      "777cd9a2-8a6a-4eda-801e-f478c1cc5327@2deab": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "ce7ea5bc-e453-4c00-8973-5ac2ed060102@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "__version__": "1.0.2",
+  "general": {
+    "designResolution": {
+      "width": 1334,
+      "height": 750,
+      "fitHeight": true,
+      "fitWidth": false
+    }
+  },
+  "layer": [
+    {
+      "name": "Player",
+      "value": 1
+    },
+    {
+      "name": "env",
+      "value": 2
+    },
+    {
+      "name": "ground",
+      "value": 4
+    },
+    {
+      "name": "enemy",
+      "value": 8
+    }
+  ]
+}

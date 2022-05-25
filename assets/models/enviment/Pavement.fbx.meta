@@ -1,0 +1,135 @@
+{
+  "ver": "2.1.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1093ec9f-1033-41de-83dc-dd25fc82c9bb",
+  "files": [],
+  "subMetas": {
+    "0e3a8": {
+      "importer": "gltf-mesh",
+      "uuid": "1093ec9f-1033-41de-83dc-dd25fc82c9bb@0e3a8",
+      "displayName": "",
+      "id": "0e3a8",
+      "name": "Pavement_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2deab": {
+      "importer": "gltf-material",
+      "uuid": "1093ec9f-1033-41de-83dc-dd25fc82c9bb@2deab",
+      "displayName": "",
+      "id": "2deab",
+      "name": "Default_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7da7a": {
+      "importer": "gltf-scene",
+      "uuid": "1093ec9f-1033-41de-83dc-dd25fc82c9bb@7da7a",
+      "displayName": "",
+      "id": "7da7a",
+      "name": "Pavement.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "1093ec9f-1033-41de-83dc-dd25fc82c9bb@7da7a",
+    "assetFinder": {
+      "meshes": [
+        "1093ec9f-1033-41de-83dc-dd25fc82c9bb@0e3a8"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "1093ec9f-1033-41de-83dc-dd25fc82c9bb@2deab"
+      ],
+      "scenes": [
+        "1093ec9f-1033-41de-83dc-dd25fc82c9bb@7da7a"
+      ]
+    },
+    "materials": {
+      "1093ec9f-1033-41de-83dc-dd25fc82c9bb@2deab": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "USE_ALBEDO_MAP": true
+          },
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "8590ae68-85e0-4868-8e94-e808dbac6d3c@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          },
+          {},
+          {}
+        ]
+      }
+    }
+  }
+}
