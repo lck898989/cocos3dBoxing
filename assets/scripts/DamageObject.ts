@@ -33,6 +33,7 @@ export class DamageObject {
 
     @property({type: CCBoolean,tooltip: "该技能是否能够击倒敌人"})
     knockdown: boolean = false;
+    
 
     // @property({type: Node, tooltip: "伤害施加"})
     /** 伤害施加者 */
