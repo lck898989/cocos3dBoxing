@@ -24,7 +24,6 @@ export class GameManager extends Component {
 
     public playerDir: PlayerDirection = PlayerDirection.RIGHT;
 
-
     __preload() {
         GameManager.I = this;
         this._initColliderBoxPool();

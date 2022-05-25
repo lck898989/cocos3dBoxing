@@ -144,6 +144,8 @@ export class PlayerCombat extends Component {
         this.animController.setValue(damageObj.animTrigger,true);
         damageObj.inflictor = this.node;
 
+        this.addAttackBoxCollider(damageObj);
+
         this.unitState.curState = playerState;
         this.rb.setLinearVelocity(Vec3.ZERO);
         this.lastAttack = damageObj;
