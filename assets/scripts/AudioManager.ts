@@ -31,6 +31,7 @@ export class AudioManager extends BaseComp {
         this._audio.clip = clip;
         this._audio.play();
         console.log("播放音频");
+        
     }
 }
 
