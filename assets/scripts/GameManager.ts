@@ -15,6 +15,7 @@ export class GameManager extends Component {
         console.log('audioManager is ',this.audioManager);
         this.audioManager && this.audioManager.init();
         
+        
     }
 
     onLoad() {
