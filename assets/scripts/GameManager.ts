@@ -13,6 +13,7 @@ export class GameManager extends Component {
         this.audioManager = this.node.getChildByName("audioManager").getComponent(AudioManager);
         console.log('audioManager is ',this.audioManager);
         this.audioManager && this.audioManager.init();
+        
     }
 
     onLoad() {
