@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat } from 'cc';
+import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat, physics, Physics2DUtils, PhysicsSystem, geometry } from 'cc';
 import { DamageObject } from './DamageObject';
 import { GameManager } from './GameManager';
 import { CombatKeys, Direction } from './InputManager';
@@ -155,6 +155,15 @@ export class PlayerCombat extends Component {
     /** 检查伤害 */
     checkForHit() {
         console.log("检查伤害");
+        if(this.lastAttack) {
+            console.log("lastAttach is ",this.lastAttack);
+
+            const attackHeight = this.lastAttack.collHeight;
+            const attackDistance = this.lastAttack.collDistance;
+            const attackZRange = this.hitZRange;
+
+            // let ray = new geometry.Ray.create(attackDistance,attackHeight,0,);
+        }
     }
 
     playAudio(audioName: string) {
