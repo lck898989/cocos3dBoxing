@@ -25,11 +25,12 @@ export class AudioManager extends BaseComp {
         let clip: AudioClip = await resourceManager.loadAseetByBundleName(bundleName,url,AudioClip);
         if(!this._audio) {
             console.error("缺少audioSource组件");
-            
+
             return;
         }
         this._audio.clip = clip;
         this._audio.play();
+        console.log("播放音频");
     }
 }
 
