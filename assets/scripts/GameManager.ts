@@ -8,6 +8,7 @@ export class GameManager extends Component {
 
     public audioManager: AudioManager = null;
 
+
     __preload() {
         GameManager.I = this;
         this.audioManager = this.node.getChildByName("audioManager").getComponent(AudioManager);
