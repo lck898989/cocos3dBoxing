@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, animation, TERRAIN_HEIGHT_BASE, director, RigidBody, RenderingSubMesh, Vec3, Quat, CapsuleCollider, physics, PhysicsSystem, geometry, Mask, Layers, CCFloat } from 'cc';
 import { CombatKeys, Direction } from './InputManager';
-import { PlayerState, UnitStates } from './UnitStates';
+import { PlayerState, UnitStates } from '../UnitStates';
+import { GameManager, PlayerDirection } from '../GameManager';
 const { ccclass, property,requireComponent} = _decorator;
 
 @ccclass('PlayerMovement')
@@ -22,8 +23,6 @@ export class PlayerMovement extends Component {
 
     private updateVelocity = false;
     private lineVelocity: Vec3 = new Vec3(0);
-
-
     
 
     __preload() {
@@ -53,7 +52,7 @@ export class PlayerMovement extends Component {
     
 
     keyUp(action: Direction | CombatKeys) {
-        let moveArr = [Direction.LEFT,Direction.RIGHT,Direction.UP,Direction.DOWN];
+        let moveArr = [Direction.LEFT_KEY,Direction.RIGHT_KEY,Direction.UP_KEY,Direction.DOWN_KEY];
 
         
     }
@@ -63,18 +62,18 @@ export class PlayerMovement extends Component {
         this.animController.setValue('walk',true);
         this.unitState.curState = PlayerState.WALK;
         switch(action) {
-            case Direction.LEFT:
+            case Direction.LEFT_KEY:
                 this.turnToDir(action);
                 this.setVelocity(new Vec3(this.node.forward.multiplyScalar(-this.walkSpeed).x,0,0));
                 break;
-            case Direction.RIGHT:
+            case Direction.RIGHT_KEY:
                 this.turnToDir(action);
                 this.setVelocity(new Vec3(this.node.forward.multiplyScalar(-this.walkSpeed).x,0,0));
                 break;
-            case Direction.UP:
+            case Direction.UP_KEY:
                 this.setVelocity(new Vec3(0,0,-this.zSpeed));
                 break;
-            case Direction.DOWN:
+            case Direction.DOWN_KEY:
                 this.setVelocity(new Vec3(0,0,this.zSpeed));
             break;
         }
@@ -94,11 +93,13 @@ export class PlayerMovement extends Component {
             Quat.slerp(q2,this.node.rotation,q,0.9);
             this.node.setRotation(q2);
         }
-        if(dir == Direction.LEFT) {
+        if(dir == Direction.LEFT_KEY) {
             lerpQuat(-90);
+            GameManager.I.playerDir = PlayerDirection.LEFT;
         }
-        if(dir == Direction.RIGHT) {
+        if(dir == Direction.RIGHT_KEY) {
             lerpQuat(90);
+            GameManager.I.playerDir = PlayerDirection.RIGHT;
             
         }
     }

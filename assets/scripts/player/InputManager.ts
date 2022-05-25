@@ -3,13 +3,13 @@ const { ccclass, property } = _decorator;
 
 export enum Direction {
     /** 向左键 */
-    LEFT = KeyCode.ARROW_LEFT,
+    LEFT_KEY = KeyCode.ARROW_LEFT,
     /** 向右键 */
-    RIGHT = KeyCode.ARROW_RIGHT,
+    RIGHT_KEY = KeyCode.ARROW_RIGHT,
     /** 向上键 */
-    UP = KeyCode.ARROW_UP,
+    UP_KEY = KeyCode.ARROW_UP,
     /** 向下键 */
-    DOWN = KeyCode.ARROW_DOWN
+    DOWN_KEY = KeyCode.ARROW_DOWN
 }
 export enum CombatKeys {
     /** 出拳键 */

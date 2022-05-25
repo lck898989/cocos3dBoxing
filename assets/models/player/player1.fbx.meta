@@ -504,12 +504,34 @@
         },
         "events": [
           {
+            "frame": 0,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0,
+            "func": "playAudio",
+            "params": [
+              "whoosh"
+            ]
+          },
+          {
             "frame": 0.16666666666666666,
             "func": "",
             "params": []
           },
           {
             "frame": 0.16666666666666666,
+            "func": "checkForHit",
+            "params": []
+          },
+          {
+            "frame": 0.4666666666666667,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.4666666666666667,
             "func": "checkForHit",
             "params": []
           }

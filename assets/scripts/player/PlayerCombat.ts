@@ -1,9 +1,9 @@
-import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat, physics, Physics2DUtils, PhysicsSystem, geometry } from 'cc';
-import { DamageObject } from './DamageObject';
-import { GameManager } from './GameManager';
+import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat, physics, Physics2DUtils, PhysicsSystem, geometry, Prefab, NodePool, instantiate, Collider, color } from 'cc';
+import { DamageObject } from '../damage/DamageObject';
+import { GameManager } from '../GameManager';
 import { CombatKeys, Direction } from './InputManager';
 import { PlayerMovement } from './PlayerMovement';
-import { PlayerState, UnitStates } from './UnitStates';
+import { PlayerState, UnitStates } from '../UnitStates';
 const { ccclass, property } = _decorator;
 
 /**
@@ -16,6 +16,15 @@ export class PlayerCombat extends Component {
 
     private isJumping: boolean = false;
     
+    @property({type: Node,tooltip: "左手碰撞检测挂点"})
+    leftHandMountPoint: Node = null;
+    @property({type: Node,tooltip: "右手碰撞检测挂点"})
+    rightHandMountPoint: Node = null;
+
+    @property(Prefab)
+    testCube: Prefab = null;
+    
+
     @property(CCFloat)
     jumpForce: number = 2;
 
@@ -52,6 +61,7 @@ export class PlayerCombat extends Component {
         this.unitState = this.node.getComponent(UnitStates);
 
     }
+    
 
     start() {
 
@@ -68,7 +78,7 @@ export class PlayerCombat extends Component {
     }
 
     keyUp(action: Direction | CombatKeys) {
-        let moveArr = [Direction.LEFT,Direction.RIGHT,Direction.UP,Direction.DOWN];
+        // let moveArr = [Direction.LEFT,Direction.RIGHT,Direction.UP,Direction.DOWN];
         // if(moveArr.indexOf(action as Direction) >= 0) {
         //     this.animController.setValue('walk',false);
         // }
@@ -123,6 +133,8 @@ export class PlayerCombat extends Component {
         this.animController.setValue(damageObj.animTrigger,true);
         damageObj.inflictor = this.node;
 
+        this.addAttackBoxCollider(damageObj);
+
         this.unitState.curState = playerState;
         this.rb.setLinearVelocity(Vec3.ZERO);
         this.lastAttack = damageObj;
@@ -132,6 +144,18 @@ export class PlayerCombat extends Component {
             clearTimeout(id);
             this.ready();
         },damageObj.duration * 1000);
+    }
+
+    addAttackBoxCollider(damageObj: DamageObject) {
+        switch(damageObj.damageName) {
+            case "punch1":
+                const box = GameManager.I.getColliderBoxFromPool();
+                const attackHeight = damageObj.collHeight;
+                const attackDistance = damageObj.collDistance;
+                const attackZRange = this.hitZRange;
+                box.parent = this.leftHandMountPoint;
+                break;
+        }
     }
 
     /** 前一个动作执行完毕，如果有继续输入了拳击或者脚踢的话就就绪执行下一个动作 */
@@ -162,8 +186,30 @@ export class PlayerCombat extends Component {
             const attackDistance = this.lastAttack.collDistance;
             const attackZRange = this.hitZRange;
 
-            // let ray = new geometry.Ray.create(attackDistance,attackHeight,0,);
+            const targetPos = this.node.worldPosition.add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
+            const localTarget = this.node.position.add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
+            let ray = geometry.Ray.create(targetPos.x,targetPos.y,targetPos.z,GameManager.I.playerDir,0,0);
 
+            // 后期优化比较所有的敌人距离自己的距离最近的如果在检测范围内才开始射线检测否则不检测直接返回 没有命中敌人
+            // PhysicsSystem.instance.raycastClosestResult()
+            let isCollision = PhysicsSystem.instance.raycastClosest(ray);
+            PhysicsSystem.instance.raycast(ray);
+            console.log(PhysicsSystem.instance.raycastResults);
+            if(isCollision) {
+                const result: physics.PhysicsRayResult = PhysicsSystem.instance.raycastClosestResult;
+                let targetAABB = result.collider.worldBounds as geometry.AABB;
+                // 创建一个虚拟球
+                let sphere = geometry.Sphere.create(targetPos.x,targetPos.y,targetPos.z,attackZRange);
+                let isCollision = geometry.intersect.sphereAABB(sphere,targetAABB);
+                console.log("是否相交",isCollision);
+            }
+
+            // let capsule = geometry
+            // geometry.intersect.sphereCapsule();
+
+            // let ray = new geometry.Ray.create(attackDistance,attackHeight,0,);
+            
+            // geometry.intersect.aabbWithOBB();
 
         
         }
