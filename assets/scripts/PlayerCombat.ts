@@ -163,6 +163,7 @@ export class PlayerCombat extends Component {
             const attackZRange = this.hitZRange;
 
             // let ray = new geometry.Ray.create(attackDistance,attackHeight,0,);
+            
         }
     }
 
