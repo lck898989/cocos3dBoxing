@@ -1,9 +1,10 @@
-import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat, physics, Physics2DUtils, PhysicsSystem, geometry, Prefab, NodePool, instantiate, Collider, color } from 'cc';
+import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat, physics, Physics2DUtils, PhysicsSystem, geometry, Prefab, NodePool, instantiate, Collider, color, SphereCollider } from 'cc';
 import { DamageObject } from '../damage/DamageObject';
 import { GameManager } from '../GameManager';
 import { CombatKeys, Direction } from './InputManager';
 import { PlayerMovement } from './PlayerMovement';
 import { PlayerState, UnitStates } from '../UnitStates';
+import { IDamage } from '../damage/IDamage';
 const { ccclass, property } = _decorator;
 
 /**
@@ -23,6 +24,12 @@ export class PlayerCombat extends Component {
 
     @property(Prefab)
     testCube: Prefab = null;
+
+    @property({type: Vec3,tooltip: "玩家的有效攻击范围"})
+    attackRange: Vec3 = new Vec3(0);
+
+    @property({type: CCFloat,tooltip: "玩家开始检测攻击挂点最大距离"})
+    checkAttackRange: number = 2;
     
 
     @property(CCFloat)
@@ -32,7 +39,7 @@ export class PlayerCombat extends Component {
     @property({type: [DamageObject]})
     punchCombo: DamageObject[] = [];
 
-    private hitZRange: number = 2;
+    private hitZRange: number = 0.5;
     /** 攻击组合索引 */
     private comboIndex: number = -1;
     private continuePunchCombo: boolean = false;
@@ -53,13 +60,17 @@ export class PlayerCombat extends Component {
     /** 是否着地 */
     private isGround: boolean = true;
 
+    private attackSphere: SphereCollider = null;
+
     onLoad() {
         this.animController = this.node.getComponent(animation.AnimationController);
         this.rb = this.node.getComponent(RigidBody);
         this.capCollider = this.node.getComponent(CapsuleCollider);
         this.playerMovement = this.node.getComponent(PlayerMovement);
         this.unitState = this.node.getComponent(UnitStates);
+        this.attackSphere = this.node.getChildByName('attackRange').getComponent(SphereCollider);
 
+        console.log('shapde is ',this.attackSphere.boundingSphere);
     }
     
 
@@ -133,8 +144,6 @@ export class PlayerCombat extends Component {
         this.animController.setValue(damageObj.animTrigger,true);
         damageObj.inflictor = this.node;
 
-        this.addAttackBoxCollider(damageObj);
-
         this.unitState.curState = playerState;
         this.rb.setLinearVelocity(Vec3.ZERO);
         this.lastAttack = damageObj;
@@ -186,36 +195,41 @@ export class PlayerCombat extends Component {
             const attackDistance = this.lastAttack.collDistance;
             const attackZRange = this.hitZRange;
 
-            const targetPos = this.node.worldPosition.add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
-            const localTarget = this.node.position.add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
+            const targetPos = this.node.worldPosition.clone().add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
+            const localTarget = this.node.position.clone().add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
             let ray = geometry.Ray.create(targetPos.x,targetPos.y,targetPos.z,GameManager.I.playerDir,0,0);
 
-            // 后期优化比较所有的敌人距离自己的距离最近的如果在检测范围内才开始射线检测否则不检测直接返回 没有命中敌人
-            // PhysicsSystem.instance.raycastClosestResult()
-            let isCollision = PhysicsSystem.instance.raycastClosest(ray);
-            PhysicsSystem.instance.raycast(ray);
-            console.log(PhysicsSystem.instance.raycastResults);
-            if(isCollision) {
-                const result: physics.PhysicsRayResult = PhysicsSystem.instance.raycastClosestResult;
-                let targetAABB = result.collider.worldBounds as geometry.AABB;
-                // 创建一个虚拟球
-                let sphere = geometry.Sphere.create(targetPos.x,targetPos.y,targetPos.z,attackZRange);
-                let isCollision = geometry.intersect.sphereAABB(sphere,targetAABB);
-                console.log("是否相交",isCollision);
-            }
+            // 检测该波所有敌人距离自己的距离，如果在攻击范围内就开始射线监测，否则不会进行射线检测
+            const curEnemyWaveAllEnemys = GameManager.I.enemeyManager.curEnemys;
+            // 这里的敌人的世界坐标为什么那么大？
+            const closetEnemies = curEnemyWaveAllEnemys.filter(item => {
+                let offset = item.worldPosition.clone().subtract(this.node.worldPosition.clone()).length();
+                return offset <= this.checkAttackRange;
+            });
 
-            // let capsule = geometry
-            // geometry.intersect.sphereCapsule();
+            if(closetEnemies.length === 0) {
+                console.log("没有距离近的敌人，攻击无效");
+                return;
+            };
 
-            // let ray = new geometry.Ray.create(attackDistance,attackHeight,0,);
-            
-            // geometry.intersect.aabbWithOBB();
+            closetEnemies.forEach(item => {
+                const collider = item.getComponent(Collider);
 
-        
+                let targetAABB = collider.worldBounds as geometry.AABB;
+                // 创建一个虚拟盒子碰撞检测使用
+                let sphere = geometry.AABB.create(targetPos.x,targetPos.y,targetPos.z,attackZRange,attackZRange,attackZRange);
+                let t = geometry.intersect.aabbWithAABB(sphere,targetAABB);
+                console.log(`与enemey${collider.node.name}"是否相交"`);
+                if(t) {
+                    let damageObj = collider.node.getComponent(IDamage);
+                    damageObj && damageObj.hit(this.lastAttack,targetPos);
+                }
+            })
         }
     }
 
     playAudio(audioName: string) {
+        console.log('audioName is ',audioName);
         audioName = audioName.slice(0,1).toUpperCase() + audioName.slice(1);
         GameManager.I.audioManager.playEffectByBundleUrl('audios',audioName);
     }

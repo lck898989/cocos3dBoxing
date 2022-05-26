@@ -32,6 +32,19 @@ export class AudioManager extends BaseComp {
         this._audio.play();
         console.log("播放音频");
     }
+
+
+    public async playEffectByUrl(url: string) {
+        let clip: AudioClip = await resourceManager.loadAseetByBundleName('audios',url,AudioClip);
+        if(!this._audio) {
+            console.error("缺少audioSource组件");
+
+            return;
+        }
+        this._audio.clip = clip;
+        this._audio.play();
+        console.log("播放音频");
+    }
 }
 
 

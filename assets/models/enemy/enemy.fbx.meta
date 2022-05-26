@@ -11,8 +11,8 @@
     "__original-animation-4.cconb",
     "__original-animation-5.cconb",
     "__original-animation-6.cconb",
-    "__original-animation-8.cconb",
     "__original-animation-7.cconb",
+    "__original-animation-8.cconb",
     "__original-animation-9.cconb",
     "__original-animation-10.cconb",
     "__original-animation-11.cconb",
@@ -161,7 +161,7 @@
       "name": "Enemy1_Death.animation",
       "userData": {
         "gltfIndex": 3,
-        "wrapMode": 2,
+        "wrapMode": 1,
         "sample": 30,
         "span": {
           "from": 0,
@@ -485,7 +485,7 @@
             "name": "Enemy1_Death",
             "from": 0,
             "to": 2.3333332538604736,
-            "wrapMode": 2
+            "wrapMode": 1
           }
         ]
       },

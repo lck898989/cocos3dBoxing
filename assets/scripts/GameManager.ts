@@ -1,5 +1,6 @@
 import { _decorator, Component, Node, Prefab, NodePool, instantiate } from 'cc';
 import { AudioManager } from './AudioManager';
+import { EnemyManager } from './enemy/EnemyManager';
 import { Direction } from './player/InputManager';
 const { ccclass, property } = _decorator;
 
@@ -19,8 +20,10 @@ export class GameManager extends Component {
     public static I: GameManager = null;
 
     public audioManager: AudioManager = null;
+    public enemeyManager: EnemyManager = null;
 
     public playerDir: PlayerDirection = PlayerDirection.RIGHT;
+
 
     __preload() {
         GameManager.I = this;
@@ -28,6 +31,7 @@ export class GameManager extends Component {
         this.audioManager = this.node.getChildByName("audioManager").getComponent(AudioManager);
         console.log('audioManager is ',this.audioManager);
         this.audioManager && this.audioManager.init();
+        this.enemeyManager = this.node.getChildByName('enemys').getComponent(EnemyManager);
         
     }
 
