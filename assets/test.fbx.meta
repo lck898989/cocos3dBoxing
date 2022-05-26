@@ -4,8 +4,8 @@
   "imported": true,
   "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0",
   "files": [
-    "__original-animation-0.cconb",
-    "__original-animation-1.cconb"
+    "__original-animation-1.cconb",
+    "__original-animation-0.cconb"
   ],
   "subMetas": {
     "a62fe": {
@@ -128,22 +128,6 @@
       ],
       "subMetas": {}
     },
-    "db478": {
-      "importer": "gltf-material",
-      "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@db478",
-      "displayName": "",
-      "id": "db478",
-      "name": "CustomerMaterial.material",
-      "userData": {
-        "gltfIndex": 0
-      },
-      "ver": "1.0.14",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
     "b2c6e": {
       "importer": "gltf-scene",
       "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0@b2c6e",
@@ -209,7 +193,7 @@
         "0d704636-ae05-48c5-a977-d49febd6acd0@4f17a"
       ],
       "materials": [
-        "0d704636-ae05-48c5-a977-d49febd6acd0@db478"
+        "aa6d8c92-98e7-4fbf-bb49-7a5cb831fc19"
       ],
       "scenes": [
         "0d704636-ae05-48c5-a977-d49febd6acd0@b2c6e"
@@ -274,6 +258,8 @@
           {}
         ]
       }
-    }
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/Materials_test"
   }
 }

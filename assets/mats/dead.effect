@@ -8,6 +8,7 @@ CCEffect %{
       frag: unlit-fs:frag
       properties: &props
         mainTexture:    { value: white }
+        skinTexture:    { value: white }
         mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
   - name: transparent
     passes:
@@ -25,21 +26,34 @@ CCEffect %{
 
 CCProgram unlit-fs %{
   precision highp float;
+  #include <cc-global>
   #include <output>
   #include <cc-fog-fs>
 
   in vec2 v_uv;
   in vec3 v_position;
+  #if HAS_SECOND_UV
+    in vec2 v_uv1;
+  #endif
 
   uniform sampler2D mainTexture;
+  uniform sampler2D skinTexture;
 
   uniform Constant {
     vec4 mainColor;
   };
 
   vec4 frag () {
-    vec4 col = mainColor * texture(mainTexture, v_uv);
+    vec4 col = texture(skinTexture, v_uv);
     CC_APPLY_FOG(col, v_position);
+
+    #if HAS_SECOND_UV
+      vec4 noisecol = texture(mainTexture,v_uv1);
+      if(noisecol.r < cc_time.x / 5.) {
+        discard;
+      }
+      col = col * noisecol;
+    #endif
     return CCFragOutput(col);
   }
 }%

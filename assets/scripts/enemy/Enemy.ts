@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, CapsuleCollider, animation, Prefab, Vec3, Camera, instantiate, ParticleSystem } from 'cc';
+import { _decorator, Component, Node, CapsuleCollider, animation, Prefab, Vec3, Camera, instantiate, ParticleSystem, tween, Tween } from 'cc';
 import { HealthSystem } from '../common/HealthSystem';
 import { DamageObject } from '../damage/DamageObject';
 import { IDamage } from '../damage/IDamage';
@@ -97,6 +97,9 @@ export class Enemy extends IDamage {
         if(this.health.blood <= 0) {
             this.anim.setValue("isDeath",true);
             GameManager.I.audioManager.playEffectByUrl("PlayerDeath");
+
+            // this.node.
+            tween(this.node).to(0.5,{})
             this.isDead = true;
             return true;
         }
