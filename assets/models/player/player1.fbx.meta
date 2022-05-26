@@ -504,6 +504,18 @@
         },
         "events": [
           {
+            "frame": 0.03333333333333333,
+            "func": "",
+            "params": []
+          },
+          {
+            "frame": 0.03333333333333333,
+            "func": "playAudio",
+            "params": [
+              "Whoosh"
+            ]
+          },
+          {
             "frame": 0.16666666666666666,
             "func": "",
             "params": []
@@ -511,6 +523,11 @@
           {
             "frame": 0.16666666666666666,
             "func": "checkForHit",
+            "params": []
+          },
+          {
+            "frame": 0.4666666666666667,
+            "func": "",
             "params": []
           }
         ],

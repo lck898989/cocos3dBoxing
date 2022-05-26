@@ -1,9 +1,10 @@
-import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat, physics, Physics2DUtils, PhysicsSystem, geometry } from 'cc';
-import { DamageObject } from './DamageObject';
-import { GameManager } from './GameManager';
+import { _decorator, Component, Node, director, animation, RigidBody, CapsuleCollider, TERRAIN_HEIGHT_BASE, Vec3, CCFloat, physics, Physics2DUtils, PhysicsSystem, geometry, Prefab, NodePool, instantiate, Collider, color, SphereCollider } from 'cc';
+import { DamageObject } from '../damage/DamageObject';
+import { GameManager } from '../GameManager';
 import { CombatKeys, Direction } from './InputManager';
 import { PlayerMovement } from './PlayerMovement';
-import { PlayerState, UnitStates } from './UnitStates';
+import { PlayerState, UnitStates } from '../UnitStates';
+import { IDamage } from '../damage/IDamage';
 const { ccclass, property } = _decorator;
 
 /**
@@ -16,6 +17,21 @@ export class PlayerCombat extends Component {
 
     private isJumping: boolean = false;
     
+    @property({type: Node,tooltip: "左手碰撞检测挂点"})
+    leftHandMountPoint: Node = null;
+    @property({type: Node,tooltip: "右手碰撞检测挂点"})
+    rightHandMountPoint: Node = null;
+
+    @property(Prefab)
+    testCube: Prefab = null;
+
+    @property({type: Vec3,tooltip: "玩家的有效攻击范围"})
+    attackRange: Vec3 = new Vec3(0);
+
+    @property({type: CCFloat,tooltip: "玩家开始检测攻击挂点最大距离"})
+    checkAttackRange: number = 2;
+    
+
     @property(CCFloat)
     jumpForce: number = 2;
 
@@ -23,7 +39,7 @@ export class PlayerCombat extends Component {
     @property({type: [DamageObject]})
     punchCombo: DamageObject[] = [];
 
-    private hitZRange: number = 2;
+    private hitZRange: number = 0.5;
     /** 攻击组合索引 */
     private comboIndex: number = -1;
     private continuePunchCombo: boolean = false;
@@ -44,14 +60,19 @@ export class PlayerCombat extends Component {
     /** 是否着地 */
     private isGround: boolean = true;
 
+    private attackSphere: SphereCollider = null;
+
     onLoad() {
         this.animController = this.node.getComponent(animation.AnimationController);
         this.rb = this.node.getComponent(RigidBody);
         this.capCollider = this.node.getComponent(CapsuleCollider);
         this.playerMovement = this.node.getComponent(PlayerMovement);
         this.unitState = this.node.getComponent(UnitStates);
+        this.attackSphere = this.node.getChildByName('attackRange').getComponent(SphereCollider);
 
+        console.log('shapde is ',this.attackSphere.boundingSphere);
     }
+    
 
     start() {
 
@@ -68,7 +89,7 @@ export class PlayerCombat extends Component {
     }
 
     keyUp(action: Direction | CombatKeys) {
-        let moveArr = [Direction.LEFT,Direction.RIGHT,Direction.UP,Direction.DOWN];
+        // let moveArr = [Direction.LEFT,Direction.RIGHT,Direction.UP,Direction.DOWN];
         // if(moveArr.indexOf(action as Direction) >= 0) {
         //     this.animController.setValue('walk',false);
         // }
@@ -134,6 +155,18 @@ export class PlayerCombat extends Component {
         },damageObj.duration * 1000);
     }
 
+    addAttackBoxCollider(damageObj: DamageObject) {
+        switch(damageObj.damageName) {
+            case "punch1":
+                const box = GameManager.I.getColliderBoxFromPool();
+                const attackHeight = damageObj.collHeight;
+                const attackDistance = damageObj.collDistance;
+                const attackZRange = this.hitZRange;
+                box.parent = this.leftHandMountPoint;
+                break;
+        }
+    }
+
     /** 前一个动作执行完毕，如果有继续输入了拳击或者脚踢的话就就绪执行下一个动作 */
     ready() {
         if(this.continuePunchCombo) {
@@ -162,14 +195,41 @@ export class PlayerCombat extends Component {
             const attackDistance = this.lastAttack.collDistance;
             const attackZRange = this.hitZRange;
 
-            // let ray = new geometry.Ray.create(attackDistance,attackHeight,0,);
+            const targetPos = this.node.worldPosition.clone().add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
+            const localTarget = this.node.position.clone().add(new Vec3(attackDistance * GameManager.I.playerDir,attackHeight,-GameManager.I.playerDir * 0));
+            let ray = geometry.Ray.create(targetPos.x,targetPos.y,targetPos.z,GameManager.I.playerDir,0,0);
 
+            // 检测该波所有敌人距离自己的距离，如果在攻击范围内就开始射线监测，否则不会进行射线检测
+            const curEnemyWaveAllEnemys = GameManager.I.enemeyManager.curEnemys;
+            // 这里的敌人的世界坐标为什么那么大？
+            const closetEnemies = curEnemyWaveAllEnemys.filter(item => {
+                let offset = item.worldPosition.clone().subtract(this.node.worldPosition.clone()).length();
+                return offset <= this.checkAttackRange;
+            });
 
-        
+            if(closetEnemies.length === 0) {
+                console.log("没有距离近的敌人，攻击无效");
+                return;
+            };
+
+            closetEnemies.forEach(item => {
+                const collider = item.getComponent(Collider);
+
+                let targetAABB = collider.worldBounds as geometry.AABB;
+                // 创建一个虚拟盒子碰撞检测使用
+                let sphere = geometry.AABB.create(targetPos.x,targetPos.y,targetPos.z,attackZRange,attackZRange,attackZRange);
+                let t = geometry.intersect.aabbWithAABB(sphere,targetAABB);
+                console.log(`与enemey${collider.node.name}"是否相交"`);
+                if(t) {
+                    let damageObj = collider.node.getComponent(IDamage);
+                    damageObj && damageObj.hit(this.lastAttack,targetPos);
+                }
+            })
         }
     }
 
     playAudio(audioName: string) {
+        console.log('audioName is ',audioName);
         audioName = audioName.slice(0,1).toUpperCase() + audioName.slice(1);
         GameManager.I.audioManager.playEffectByBundleUrl('audios',audioName);
     }
