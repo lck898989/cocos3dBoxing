@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, Vec3 } from 'cc';
 import { DamageObject } from './DamageObject';
 const { ccclass, property } = _decorator;
 
@@ -10,6 +10,6 @@ const { ccclass, property } = _decorator;
 @ccclass('IDamage')
 export class IDamage extends Component {
     /** 受伤方法 */
-    public hit(damage: DamageObject) {};
+    public hit(damage: DamageObject,pos: Vec3) {};
 }
 
