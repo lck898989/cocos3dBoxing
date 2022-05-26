@@ -400,22 +400,6 @@
       ],
       "subMetas": {}
     },
-    "2deab": {
-      "importer": "gltf-material",
-      "uuid": "bcb81354-e84f-4426-bbe8-0deb382e9391@2deab",
-      "displayName": "",
-      "id": "2deab",
-      "name": "Default_Material.material",
-      "userData": {
-        "gltfIndex": 0
-      },
-      "ver": "1.0.14",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
     "90fd6": {
       "importer": "gltf-scene",
       "uuid": "bcb81354-e84f-4426-bbe8-0deb382e9391@90fd6",
@@ -643,7 +627,7 @@
       ],
       "textures": [],
       "materials": [
-        "bcb81354-e84f-4426-bbe8-0deb382e9391@2deab"
+        "25691e92-5fe3-459e-b266-c92fdd8a6121"
       ],
       "scenes": [
         "bcb81354-e84f-4426-bbe8-0deb382e9391@90fd6"
@@ -713,6 +697,8 @@
           {}
         ]
       }
-    }
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/models/enemy/Materials_enemy"
   }
 }

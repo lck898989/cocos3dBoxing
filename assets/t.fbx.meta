@@ -62,22 +62,6 @@
       ],
       "subMetas": {}
     },
-    "b4e6b": {
-      "importer": "gltf-material",
-      "uuid": "f3dbf45f-e6b9-42aa-8fd4-72ec2d602bf5@b4e6b",
-      "displayName": "",
-      "id": "b4e6b",
-      "name": "Material.material",
-      "userData": {
-        "gltfIndex": 0
-      },
-      "ver": "1.0.14",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
     "2e6c0": {
       "importer": "gltf-scene",
       "uuid": "f3dbf45f-e6b9-42aa-8fd4-72ec2d602bf5@2e6c0",
@@ -113,11 +97,13 @@
         "f3dbf45f-e6b9-42aa-8fd4-72ec2d602bf5@7d6ab"
       ],
       "materials": [
-        "f3dbf45f-e6b9-42aa-8fd4-72ec2d602bf5@b4e6b"
+        "a425144c-d8a5-4d46-b5c8-a6227fdaa492"
       ],
       "scenes": [
         "f3dbf45f-e6b9-42aa-8fd4-72ec2d602bf5@2e6c0"
       ]
-    }
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/Materials_t"
   }
 }
