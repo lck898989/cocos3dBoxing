@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, NodePool, instantiate } from 'cc';
+import { _decorator, Component, Node, Prefab, NodePool, instantiate, Camera } from 'cc';
 import { AudioManager } from './AudioManager';
 import { EnemyManager } from './enemy/EnemyManager';
 import { Direction } from './player/InputManager';
@@ -23,6 +23,9 @@ export class GameManager extends Component {
     public enemeyManager: EnemyManager = null;
 
     public playerDir: PlayerDirection = PlayerDirection.RIGHT;
+
+    @property(Node)
+    public mainCamera: Node = null;
 
 
     __preload() {

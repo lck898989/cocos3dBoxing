@@ -69,7 +69,7 @@
       ],
       "textures": [],
       "materials": [
-        "43861d1f-2e12-4c1d-8880-0e07271f4b6c"
+        "7defbf72-2e8b-44a8-bfc4-872ba5772fd2"
       ],
       "scenes": [
         "812ca0ef-7ac9-430f-a180-7aa9733d357d@185ad"
@@ -141,6 +141,6 @@
     },
     "dumpMaterials": true,
     "depthWriteInAlphaModeBlend": false,
-    "materialDumpDir": "db://assets/models/player/Materials_player2"
+    "materialDumpDir": "db://assets/models/player/player2"
   }
 }

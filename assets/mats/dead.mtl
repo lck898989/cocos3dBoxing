@@ -10,7 +10,8 @@
   "_techIdx": "1",
   "_defines": [
     {
-      "HAS_SECOND_UV": true
+      "USE_ALBEDO_MAP": true,
+      "USE_NORMAL_MAP": true
     }
   ],
   "_states": [
@@ -26,13 +27,32 @@
   ],
   "_props": [
     {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 238,
+        "g": 238,
+        "b": 238,
+        "a": 255
+      },
+      "normalStrength": 1.548,
       "mainTexture": {
+        "__uuid__": "15a2c70e-4438-4f70-825f-230f9a289484@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "normalMap": {
+        "__uuid__": "d3030d11-aba8-476e-a570-650941e4a74f@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "noiseTexture": {
         "__uuid__": "10cbd665-5a58-41ec-9c63-afd05f401be0@6c48a",
         "__expectedType__": "cc.Texture2D"
       },
-      "skinTexture": {
-        "__uuid__": "f3dbf45f-e6b9-42aa-8fd4-72ec2d602bf5@7d6ab",
-        "__expectedType__": "cc.Texture2D"
+      "dissolveColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 0,
+        "b": 0,
+        "a": 255
       }
     }
   ]
