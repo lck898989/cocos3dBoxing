@@ -17,6 +17,9 @@ export class EnemyManager extends Component {
     public set curEnemyWave(waveIndex: number) {
         
         this._curEnemyWave = waveIndex || 0;
+        if(!this.node.getChildByName(`wave${waveIndex}`)) {
+            return;
+        }
         this._curEnemys = this.node.getChildByName(`wave${waveIndex}`).children;
         console.log('enemys is ',this._curEnemys);
     }

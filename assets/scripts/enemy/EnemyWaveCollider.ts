@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, BoxCollider, ITriggerEvent } from 'cc';
+import { GameManager } from '../GameManager';
 const { ccclass, property,requireComponent } = _decorator;
 
 @ccclass('EnemyWaveCollider')
@@ -21,6 +22,7 @@ export class EnemyWaveCollider extends Component {
 
     playerIn(event: ITriggerEvent) {
         console.log("触发新的一波敌人");
+        GameManager.I.enemeyManager.curEnemyWave++;
     }   
 }
 

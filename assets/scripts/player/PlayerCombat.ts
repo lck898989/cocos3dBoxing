@@ -235,7 +235,7 @@ export class PlayerCombat extends Component {
     }
 
     addForce(force: number) {
-
+        
     }
 
     
