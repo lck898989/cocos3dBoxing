@@ -5,6 +5,7 @@ import { CombatKeys, Direction } from './InputManager';
 import { PlayerMovement } from './PlayerMovement';
 import { PlayerState, UnitStates } from '../UnitStates';
 import { IDamage } from '../damage/IDamage';
+import { Enemy } from '../enemy/Enemy';
 const { ccclass, property } = _decorator;
 
 /**
@@ -203,8 +204,9 @@ export class PlayerCombat extends Component {
             const curEnemyWaveAllEnemys = GameManager.I.enemeyManager.curEnemys;
             // 这里的敌人的世界坐标为什么那么大？
             const closetEnemies = curEnemyWaveAllEnemys.filter(item => {
+                const enemyComp = item.getComponent(Enemy);
                 let offset = item.worldPosition.clone().subtract(this.node.worldPosition.clone()).length();
-                return offset <= this.checkAttackRange;
+                return (offset <= this.checkAttackRange) && (enemyComp && !enemyComp.isDead);
             });
 
             if(closetEnemies.length === 0) {
@@ -235,7 +237,7 @@ export class PlayerCombat extends Component {
     }
 
     addForce(force: number) {
-
+        
     }
 
     

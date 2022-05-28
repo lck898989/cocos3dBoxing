@@ -43,5 +43,8 @@ export class DamageObject {
         this.damage = damage;
         this.inflictor = inflictor;
     }
+
+
+    
 }
 

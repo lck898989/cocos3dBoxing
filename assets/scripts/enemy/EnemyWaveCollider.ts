@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, BoxCollider, ITriggerEvent } from 'cc';
+import { GameManager } from '../GameManager';
 const { ccclass, property,requireComponent } = _decorator;
 
 @ccclass('EnemyWaveCollider')
@@ -20,7 +21,16 @@ export class EnemyWaveCollider extends Component {
     }
 
     playerIn(event: ITriggerEvent) {
-        console.log("触发新的一波敌人");
+        /** 所有波段的敌人都已经消灭了不在处罚生成敌人的操作 */
+        if(GameManager.I.enemeyManager.levelOver) return;
+
+        if(GameManager.I.enemeyManager.curWaveIsOver()) {
+            console.log("触发新的一波敌人");
+            GameManager.I.enemeyManager.curEnemyWave++;
+            GameManager.I.UIManager.hideNextAnimation();
+        } else {
+            console.log("上一波敌人没有消灭完毕");
+        }
     }   
 }
 
