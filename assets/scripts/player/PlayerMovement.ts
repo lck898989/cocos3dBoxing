@@ -42,25 +42,13 @@ export class PlayerMovement extends Component {
     onEnable() {
         director.on('keypress',this.moveAction,this);
         director.on('keyup',this.keyUp,this);
-        director.on('keydown',this.turnOnly,this);
     }
 
     onDisable() {
         director.off('keypress',this.moveAction,this);
         director.off('keyup',this.keyUp,this);
-        director.on('keydown',this.turnOnly,this);
     }
 
-    turnOnly(action: Direction) {
-        switch(action) {
-            case Direction.LEFT_KEY:
-                this.turnToDir(action);
-                break;
-            case Direction.RIGHT_KEY:
-                this.turnToDir(action);
-                break;
-        }
-    }
     
 
     keyUp(action: Direction | CombatKeys) {
@@ -71,7 +59,6 @@ export class PlayerMovement extends Component {
 
     moveAction(action: Direction) {
         console.log('action is ',Direction[action]);
-        
         this.animController.setValue('walk',true);
         this.unitState.curState = PlayerState.WALK;
         switch(action) {
@@ -99,21 +86,18 @@ export class PlayerMovement extends Component {
     }
 
     turnToDir(dir: Direction) {
-
         const lerpQuat = (angle: number) => {
             let q: Quat = new Quat();
             let q2: Quat = new Quat();
             Quat.fromEuler(q,0,angle,0);
-            Quat.slerp(q2,this.node.rotation,q,0.95);
+            Quat.slerp(q2,this.node.rotation,q,0.9);
             this.node.setRotation(q2);
         }
         if(dir == Direction.LEFT_KEY) {
-            if(GameManager.I.playerDir === PlayerDirection.LEFT) return;
             lerpQuat(-90);
             GameManager.I.playerDir = PlayerDirection.LEFT;
         }
         if(dir == Direction.RIGHT_KEY) {
-            if(GameManager.I.playerDir === PlayerDirection.RIGHT) return;
             lerpQuat(90);
             GameManager.I.playerDir = PlayerDirection.RIGHT;
             
@@ -149,15 +133,10 @@ export class PlayerMovement extends Component {
 
     update(deltaTime: number) {
         
-        let velocity = new Vec3(0);
-        this.rb.getLinearVelocity(velocity);
-
-        // this.animController.setValue("walkSpeed",velocity.length());
-        // this.animController.getVariables()
-
-        // if()
         if(this.unitState.curState === PlayerState.WALK) {
-            
+            let velocity = new Vec3(0);
+            this.rb.getLinearVelocity(velocity);
+    
             if(this.updateVelocity && velocity.length() <= 0.5) {
                 this.animController.setValue("walk",false);
                 this.updateVelocity = false;
