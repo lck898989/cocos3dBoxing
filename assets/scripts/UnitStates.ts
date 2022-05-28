@@ -14,6 +14,8 @@ export enum PlayerState {
     DEATH,
     JUMP,
 
+    KNOCKDOWN,
+
 }
 
 /**

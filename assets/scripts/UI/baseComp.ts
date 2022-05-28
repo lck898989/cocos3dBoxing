@@ -63,6 +63,7 @@ export default class BaseComp extends Component {
                     if(nodeItem.getComponent(Sprite) && nodeItem.getComponent(ProgressBar)) {
                         this[`${nodeItem.name}`] = nodeItem.getComponent(ProgressBar);
                     }
+                    // console.log();
                     // 如果有该属性直接赋值
                     // this.viewMap[path + nodeItem.name] = nodeItem;
                 }

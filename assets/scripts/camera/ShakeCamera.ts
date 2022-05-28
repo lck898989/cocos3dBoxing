@@ -44,9 +44,7 @@ export class ShakeCamera extends Component {
             const x = this.createRandom('x');
             const y = this.createRandom('y');
             const z = this.createRandom('z');
-            console.log('x is ',x);
-            console.log('y is ',y);
-            console.log('z is ',z);
+            
             this.curveData[i] = new Vec3(x,y,z);
         }
     }

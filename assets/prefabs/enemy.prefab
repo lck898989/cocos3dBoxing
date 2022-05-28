@@ -28,20 +28,23 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 129
+        "__id__": 134
       },
       {
-        "__id__": 131
+        "__id__": 136
       },
       {
-        "__id__": 133
+        "__id__": 138
       },
       {
-        "__id__": 135
+        "__id__": 140
+      },
+      {
+        "__id__": 143
       }
     ],
     "_prefab": {
-      "__id__": 138
+      "__id__": 145
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -3274,12 +3277,18 @@
     "_children": [
       {
         "__id__": 120
+      },
+      {
+        "__id__": 129
+      },
+      {
+        "__id__": 131
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 128
+      "__id__": 133
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -3356,7 +3365,11 @@
         "__id__": 127
       }
     ],
-    "removedComponents": []
+    "removedComponents": [
+      {
+        "__id__": 128
+      }
+    ]
   },
   {
     "__type__": "CCPropertyOverrideInfo",
@@ -3366,7 +3379,7 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "hitParticle"
+    "value": "hit"
   },
   {
     "__type__": "cc.TargetInfo",
@@ -3421,6 +3434,114 @@
     }
   },
   {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "88XI50J7hNjpQ0YdZ0ibjN"
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "defend",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 119
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [],
+    "_prefab": {
+      "__id__": 130
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 8,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "cbJbRjvaRM/qGkylUKUuEE"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "dust",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 119
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [],
+    "_prefab": {
+      "__id__": 132
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 1.1,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 8,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "1cNqr2ktNBHapCkxusea3z"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
@@ -3440,7 +3561,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 130
+      "__id__": 135
     },
     "graph": {
       "__uuid__": "a0d7aa6c-0a92-415b-9e85-e79d0a93554d",
@@ -3462,7 +3583,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 132
+      "__id__": 137
     },
     "_group": 1,
     "_type": 1,
@@ -3499,7 +3620,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 134
+      "__id__": 139
     },
     "_material": null,
     "_isTrigger": false,
@@ -3528,13 +3649,10 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 136
-    },
-    "hitPrefab": {
-      "__id__": 120
+      "__id__": 141
     },
     "health": {
-      "__id__": 137
+      "__id__": 142
     },
     "_id": ""
   },
@@ -3544,7 +3662,25 @@
   },
   {
     "__type__": "HealthSystem",
-    "blood": 100
+    "_blood": 100
+  },
+  {
+    "__type__": "5bb35V2BOFKiqwEuhMuPueF",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 144
+    },
+    "_curState": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "13gB26DOJCyZ2LqnZJQA7X"
   },
   {
     "__type__": "cc.PrefabInfo",
