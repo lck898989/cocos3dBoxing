@@ -1,0 +1,63 @@
+// Effect Syntax Guide: https://docs.cocos.com/creator/manual/zh/shader/index.html
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: unlit-fs:frag
+      properties: &props
+        mainTexture:    { value: white }
+        mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
+        resolution:     { value: [1,1] }
+        center:         { value: [0,0], edtor: {step: 0.1}}
+  - name: transparent
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: unlit-fs:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram unlit-fs %{
+  precision highp float;
+  #include <output>
+  #include <cc-fog-fs>
+
+  in vec2 v_uv;
+  in vec3 v_position;
+
+  uniform sampler2D mainTexture;
+
+  uniform Constant {
+    vec4 mainColor;
+    vec2 resolution;
+    vec2 center;
+  };
+
+  vec4 circle(vec2 uv,vec2 center,float radius,out vec4 col) {
+    float len = pow(uv.x - center.x,2.) + pow(uv.y - center.y,2.);
+    if(len >= radius * radius) {
+      col.a = 0.;
+    }
+    return col;
+  }
+
+  vec4 frag () {
+    vec4 col = texture(mainTexture, v_uv);
+    CC_APPLY_FOG(col, v_position);
+
+    vec2 uv_avatar = vec2(v_uv.x,1. - v_uv.y);
+    uv_avatar = uv_avatar - 0.5;
+
+    circle(uv_avatar,center,0.5,col);
+    
+    return CCFragOutput(col);
+  }
+}%

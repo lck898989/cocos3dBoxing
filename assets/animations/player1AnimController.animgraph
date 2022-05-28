@@ -10,26 +10,29 @@
       }
     ],
     "_variables": {
-      "walk": {
+      "punch1": {
         "__id__": 56
       },
-      "punch1": {
+      "kick1": {
         "__id__": 57
       },
-      "kick1": {
+      "punch3": {
         "__id__": 58
       },
-      "punch3": {
+      "kick2": {
         "__id__": 59
       },
-      "kick2": {
+      "jump": {
         "__id__": 60
       },
-      "jump": {
+      "punch2": {
         "__id__": 61
       },
-      "punch2": {
+      "walk": {
         "__id__": 62
+      },
+      "walkSpeed": {
+        "__id__": 63
       }
     }
   },
@@ -46,9 +49,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.8199999999999998,
-        "top": -116.54757410193722,
-        "left": 17.369426225030093
+        "scale": 0.9199999999999999,
+        "top": -106.55432753795387,
+        "left": -1.6317341243857513
       }
     },
     "_states": [
@@ -177,8 +180,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 329.62342962769094,
-      "centerY": 2.3498413269645653,
+      "centerX": 322.80722409409407,
+      "centerY": -16.14620610386544,
       "id": "16532051516770.4698454145244415"
     },
     "name": "Walk",
@@ -429,10 +432,10 @@
         "__id__": 24
       }
     ],
-    "duration": 0.01,
+    "duration": 0.1,
     "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
   },
   {
     "__type__": "cc.animation.UnaryCondition",
@@ -481,10 +484,10 @@
         "__id__": 29
       }
     ],
-    "duration": 0.01,
+    "duration": 0.1,
     "relativeDuration": false,
-    "exitConditionEnabled": false,
-    "_exitCondition": 1
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
   },
   {
     "__type__": "cc.animation.UnaryCondition",
@@ -783,11 +786,6 @@
     "trigger": "punch3"
   },
   {
-    "__type__": "cc.animation.PlainVariable",
-    "_type": 1,
-    "_value": false
-  },
-  {
     "__type__": "cc.animation.TriggerVariable",
     "_flags": 0
   },
@@ -811,5 +809,15 @@
   {
     "__type__": "cc.animation.TriggerVariable",
     "_flags": 0
+  },
+  {
+    "__type__": "cc.animation.PlainVariable",
+    "_type": 1,
+    "_value": false
+  },
+  {
+    "__type__": "cc.animation.PlainVariable",
+    "_type": 0,
+    "_value": 0
   }
 ]

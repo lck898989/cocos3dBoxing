@@ -6,16 +6,16 @@
   "files": [
     "__original-animation-0.cconb",
     "__original-animation-1.cconb",
-    "__original-animation-2.cconb",
     "__original-animation-3.cconb",
-    "__original-animation-4.cconb",
+    "__original-animation-2.cconb",
     "__original-animation-5.cconb",
+    "__original-animation-4.cconb",
     "__original-animation-6.cconb",
     "__original-animation-7.cconb",
     "__original-animation-8.cconb",
     "__original-animation-9.cconb",
-    "__original-animation-10.cconb",
     "__original-animation-11.cconb",
+    "__original-animation-10.cconb",
     "__original-animation-12.cconb",
     "__original-animation-13.cconb",
     "__original-animation-14.cconb"
@@ -29,7 +29,7 @@
       "name": "Enemy1_KnockDown_End.animation",
       "userData": {
         "gltfIndex": 9,
-        "wrapMode": 2,
+        "wrapMode": 1,
         "sample": 30,
         "span": {
           "from": 0,
@@ -253,7 +253,7 @@
       "name": "Enemy1_KnockDown_Down.animation",
       "userData": {
         "gltfIndex": 8,
-        "wrapMode": 2,
+        "wrapMode": 1,
         "sample": 30,
         "span": {
           "from": 0,
@@ -276,7 +276,7 @@
       "name": "Enemy1_KnockDown_Up.animation",
       "userData": {
         "gltfIndex": 10,
-        "wrapMode": 2,
+        "wrapMode": 1,
         "sample": 30,
         "span": {
           "from": 0,
@@ -534,7 +534,7 @@
             "name": "Enemy1_KnockDown_Down",
             "from": 0,
             "to": 0.4000000059604645,
-            "wrapMode": 2
+            "wrapMode": 1
           }
         ]
       },
@@ -547,7 +547,7 @@
             "name": "Enemy1_KnockDown_End",
             "from": 0,
             "to": 0.8999999761581421,
-            "wrapMode": 2
+            "wrapMode": 1
           }
         ]
       },
@@ -560,7 +560,7 @@
             "name": "Enemy1_KnockDown_Up",
             "from": 0,
             "to": 0.4333333373069763,
-            "wrapMode": 2
+            "wrapMode": 1
           }
         ]
       },
