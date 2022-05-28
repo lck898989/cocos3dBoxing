@@ -4,8 +4,8 @@
   "imported": true,
   "uuid": "0d704636-ae05-48c5-a977-d49febd6acd0",
   "files": [
-    "__original-animation-1.cconb",
-    "__original-animation-0.cconb"
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb"
   ],
   "subMetas": {
     "a62fe": {
@@ -193,7 +193,7 @@
         "0d704636-ae05-48c5-a977-d49febd6acd0@4f17a"
       ],
       "materials": [
-        "aa6d8c92-98e7-4fbf-bb49-7a5cb831fc19"
+        "fd37ec02-1ff9-4a5b-8bd5-8ba97b31024d"
       ],
       "scenes": [
         "0d704636-ae05-48c5-a977-d49febd6acd0@b2c6e"
