@@ -1,5 +1,7 @@
-import { _decorator, Component, Node, CCInteger } from 'cc';
+import { _decorator, Component, Node, CCInteger, Game } from 'cc';
 import { GameManager } from '../GameManager';
+import { EnemyAction } from './EnemyAction';
+import { EnemyAI } from './EnemyAI';
 import { EnemyWave } from './EnemyWave';
 const { ccclass, property } = _decorator;
 
@@ -54,6 +56,17 @@ export class EnemyManager extends Component {
         
     }
 
+    // addEnemyAI() {
+    //     let waveCount = this.node.children.length;
+    //     for(let i = 0; i < waveCount; i++) {
+    //         let waveEnemeies = this.node.getChildByName(`wave${i}`).children;
+    //         waveEnemeies.forEach(item => {
+    //             let enmeyAI = item.addComponent(EnemyAction);
+    //             enmeyAI.target = GameManager.I.player;
+    //         });
+    //     }
+    // }
+
     /**
      * 当前一波敌人是否消灭完毕
      */
@@ -66,6 +79,7 @@ export class EnemyManager extends Component {
     }
 
     onLoad() {
+        // this.addEnemyAI();
         this.curEnemyWave = 0;
         this.totalWaves = this.node.children.length;
     }

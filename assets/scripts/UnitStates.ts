@@ -5,14 +5,16 @@ const { ccclass, property } = _decorator;
 export enum PlayerState {
     IDLE,
     WALK,
-    KICK1,
-    KICK2,
-    PUNCH1,
-    PUNCH2,
-    PUNCH3,
+    KICK,
+    PUNCH,
+    HIT,
 
     DEATH,
     JUMP,
+    DEFEND,
+    STANDUP,
+
+    ATTACK,
 
     KNOCKDOWN,
 

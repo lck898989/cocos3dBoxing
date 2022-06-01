@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, CapsuleCollider, animation, Prefab, Vec3, Camera, instantiate, ParticleSystem, tween, Tween, Material, SkinnedMeshRenderer, game, director, NodePool, RigidBody, geometry, Game, Layers, ICollisionEvent, physics, PhysicsSystem, Collider2D, Quat, CapsuleColliderComponent } from 'cc';
 import { ShakeCamera } from '../camera/ShakeCamera';
 import { CollisionConst } from '../CollisionConst';
+import { Character } from '../common/Character';
 import { HealthSystem } from '../common/HealthSystem';
 import { DamageObject } from '../damage/DamageObject';
 import { IDamage } from '../damage/IDamage';
@@ -13,18 +14,10 @@ const { ccclass, property, requireComponent } = _decorator;
 @requireComponent(animation.AnimationController)
 @requireComponent(CapsuleCollider)
 @requireComponent(RigidBody)
-export class Enemy extends IDamage {
-
-    public isDead: boolean = false;
-
-    @property(HealthSystem)
-    health: HealthSystem = new HealthSystem();
+export class Enemy extends Character {
 
     public direction: PlayerDirection = PlayerDirection.LEFT;
 
-    private anim: animation.AnimationController = null;
-    private rb: RigidBody = null;
-    private capsuleCollider: CapsuleCollider = null;
     private renderComp: SkinnedMeshRenderer = null;
     
     public enemyStatus: UnitStates = null;
@@ -42,11 +35,12 @@ export class Enemy extends IDamage {
     private particleNodeMap: Map<SFXParticleType,string> = new Map();
 
     onLoad() {
+        this.isPlayer = false;
         this._initParticleNodeMap();
-        this.capsuleCollider = this.node.getComponent(CapsuleCollider);
+        // this.capsuleCollider = this.node.getComponent(CapsuleCollider);
         this.capsuleCollider.addMask(CollisionConst.groups.GROUND || CollisionConst.groups.PLAYER);
-        this.anim = this.node.getComponent(animation.AnimationController);
-        this.rb = this.node.getComponent(RigidBody);
+        // this.anim = this.node.getComponent(animation.AnimationController);
+        // this.rb = this.node.getComponent(RigidBody);
         this.enemyStatus = this.node.getComponent(UnitStates);
 
         this.renderComp = this.node.getComponentInChildren(SkinnedMeshRenderer);
@@ -160,14 +154,6 @@ export class Enemy extends IDamage {
         this.addForce(new Vec3(-this.direction * this.horizonForce,0,0));
     }
 
-    subHeath(value: number) {
-        this.health.blood -= value;
-        GameManager.I.UIManager.setEnemyBlood(this.health.blood);
-        if(this.health.blood <= 0) {
-            this.isDead = true;
-        }
-    }
-
     /** 倒地的一系列动作 */
     public async knockDownSequence(damage: DamageObject,callback: Function) {
         
@@ -253,7 +239,7 @@ export class Enemy extends IDamage {
 
     checkIsDeath() {
         if(this.health.blood <= 0) {
-            this.anim.setValue("isDeath",true);
+            this.anim.setValue("isDead",true);
             // GameManager.I.audioManager.playEffectByUrl("PlayerDeath");
             GameManager.I.audioManager.playEffectByUrl("KO");
             this.flickerEnemy();
@@ -292,7 +278,7 @@ export class Enemy extends IDamage {
                     },100)
                 }
                 show = !show;
-                this.node.active = show;
+                this.node && (this.node.active = show);
                 i++;
             },100);
             
