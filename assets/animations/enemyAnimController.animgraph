@@ -11,40 +11,43 @@
     ],
     "_variables": {
       "hit2": {
-        "__id__": 49
+        "__id__": 74
       },
       "hit1": {
-        "__id__": 50
+        "__id__": 75
       },
       "attack1": {
-        "__id__": 51
+        "__id__": 76
       },
       "attack2": {
-        "__id__": 52
+        "__id__": 77
       },
       "walkSpeed": {
-        "__id__": 53
+        "__id__": 78
       },
       "defend": {
-        "__id__": 54
+        "__id__": 79
       },
       "death": {
-        "__id__": 55
-      },
-      "isDeath": {
-        "__id__": 56
+        "__id__": 80
       },
       "knockDown": {
-        "__id__": 57
+        "__id__": 81
       },
       "knockDownUp": {
-        "__id__": 58
+        "__id__": 82
       },
       "knockDownEnd": {
-        "__id__": 59
+        "__id__": 83
       },
       "standUp": {
-        "__id__": 60
+        "__id__": 84
+      },
+      "attack3": {
+        "__id__": 85
+      },
+      "isDead": {
+        "__id__": 86
       }
     }
   },
@@ -61,9 +64,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.7199999999999998,
-        "top": -123.93219258990501,
-        "left": -305.6522775646213
+        "scale": 0.6599999999999997,
+        "top": -224.2612679812964,
+        "left": -292.2093719214412
       }
     },
     "_states": [
@@ -102,24 +105,21 @@
       },
       {
         "__id__": 22
-      }
-    ],
-    "_transitions": [
+      },
       {
         "__id__": 24
       },
       {
-        "__id__": 25
+        "__id__": 26
       },
       {
-        "__id__": 27
-      },
-      {
-        "__id__": 29
+        "__id__": 28
       },
       {
         "__id__": 30
-      },
+      }
+    ],
+    "_transitions": [
       {
         "__id__": 32
       },
@@ -139,16 +139,55 @@
         "__id__": 40
       },
       {
-        "__id__": 42
+        "__id__": 41
       },
       {
-        "__id__": 44
+        "__id__": 43
+      },
+      {
+        "__id__": 45
       },
       {
         "__id__": 46
       },
       {
         "__id__": 48
+      },
+      {
+        "__id__": 50
+      },
+      {
+        "__id__": 52
+      },
+      {
+        "__id__": 54
+      },
+      {
+        "__id__": 56
+      },
+      {
+        "__id__": 57
+      },
+      {
+        "__id__": 61
+      },
+      {
+        "__id__": 65
+      },
+      {
+        "__id__": 67
+      },
+      {
+        "__id__": 69
+      },
+      {
+        "__id__": 71
+      },
+      {
+        "__id__": 72
+      },
+      {
+        "__id__": 73
       }
     ],
     "_entryState": {
@@ -164,8 +203,8 @@
   {
     "__type__": "cc.animation.State",
     "__editorExtras__": {
-      "centerX": -197,
-      "centerY": -24,
+      "centerX": 615.844611528822,
+      "centerY": 112.46616541353387,
       "id": "16533706194420.5448287993903298"
     },
     "name": "Entry"
@@ -186,8 +225,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": -55.765625,
-      "centerY": -24.5,
+      "centerX": 616.8776611651228,
+      "centerY": 277.2247543423356,
       "id": "16533711521500.5088465627610295"
     },
     "name": "Enemy1_Idle",
@@ -215,8 +254,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": -54.6875,
-      "centerY": -120,
+      "centerX": 894.1220238095241,
+      "centerY": 429.52380952380963,
       "id": "16535216791110.21244737953710358"
     },
     "name": "Enemy1_Hit1",
@@ -244,8 +283,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": -53.6875,
-      "centerY": 98,
+      "centerX": 362.788472540046,
+      "centerY": 408.52631578947376,
       "id": "16535217484250.5523331879574938"
     },
     "name": "Enemy1_Hit2",
@@ -273,8 +312,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 180.09681372549028,
-      "centerY": -196.49019607843135,
+      "centerX": 374.9839736126503,
+      "centerY": 506.34538653976017,
       "id": "16535217620550.8362947015835851"
     },
     "name": "Enemy1_Defend",
@@ -302,8 +341,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 175.4985132813532,
-      "centerY": 315.00393154486596,
+      "centerX": 367.54396782680783,
+      "centerY": 682.0493860903206,
       "id": "16535518652620.4411102603770234"
     },
     "name": "Enemy1_Death",
@@ -331,8 +370,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 570.248351178437,
-      "centerY": -24.68230089975961,
+      "centerX": 574.1957195994896,
+      "centerY": 63.4755938370825,
       "id": "16537019041130.22240050989908045"
     },
     "name": "Enemy1_KnockDown_Down",
@@ -360,8 +399,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 349.3188175403028,
-      "centerY": -24.64200795189285,
+      "centerX": 384.84513332977644,
+      "centerY": 63.51588678494926,
       "id": "16537019074810.7732902699580786"
     },
     "name": "Enemy1_KnockDown_Up",
@@ -389,8 +428,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 809.1184071537562,
-      "centerY": -21.063841360247437,
+      "centerX": 789.381565048493,
+      "centerY": 60.51510600817363,
       "id": "16537019092780.8896298966375358"
     },
     "name": "Enemy1_KnockDown_End",
@@ -418,8 +457,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 810.6433757753725,
-      "centerY": 88.72668370360594,
+      "centerX": 789.5570060047921,
+      "centerY": 189.87378221912553,
       "id": "16537037576620.08032529501272045"
     },
     "name": "Enemy1_StandUp",
@@ -445,6 +484,122 @@
     }
   },
   {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 365.80324266161847,
+      "centerY": 339.3315080781698,
+      "id": "16538164457410.8054867174379619"
+    },
+    "name": "Enemy1_Walk",
+    "_components": [],
+    "motion": {
+      "__id__": 25
+    },
+    "speed": 1,
+    "speedMultiplier": "",
+    "speedMultiplierEnabled": false
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16538164457390.27390554689819946",
+      "centerX": 0,
+      "centerY": 0,
+      "name": ""
+    },
+    "clip": {
+      "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@85be2",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 359.48034538930347,
+      "centerY": 166.20824240428453,
+      "id": "16538187682100.9804578530224637"
+    },
+    "name": "Enemy1_Attack1",
+    "_components": [],
+    "motion": {
+      "__id__": 27
+    },
+    "speed": 1,
+    "speedMultiplier": "",
+    "speedMultiplierEnabled": false
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16538187682090.0411789709166821",
+      "centerX": 0,
+      "centerY": 0,
+      "name": ""
+    },
+    "clip": {
+      "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@98afd",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 358.8653366730098,
+      "centerY": 225.52739122771726,
+      "id": "16538187795350.12938268071098813"
+    },
+    "name": "Enemy1_Attack2",
+    "_components": [],
+    "motion": {
+      "__id__": 29
+    },
+    "speed": 1,
+    "speedMultiplier": "",
+    "speedMultiplierEnabled": false
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16538187795320.5378229137179444",
+      "centerX": 0,
+      "centerY": 0,
+      "name": ""
+    },
+    "clip": {
+      "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@d91e8",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": 368.51336663162715,
+      "centerY": 287.3410824324734,
+      "id": "16538187811060.5465910023499132"
+    },
+    "name": "Enemy1_Attack3",
+    "_components": [],
+    "motion": {
+      "__id__": 31
+    },
+    "speed": 1,
+    "speedMultiplier": "",
+    "speedMultiplierEnabled": false
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "id": "16538187811040.3245032194926418",
+      "centerX": 0,
+      "centerY": 0,
+      "name": ""
+    },
+    "clip": {
+      "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@348fe",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
     "__type__": "cc.animation.Transition",
     "from": {
       "__id__": 3
@@ -464,7 +619,7 @@
     },
     "conditions": [
       {
-        "__id__": 26
+        "__id__": 34
       }
     ],
     "duration": 0.1,
@@ -486,7 +641,7 @@
     },
     "conditions": [
       {
-        "__id__": 28
+        "__id__": 36
       }
     ],
     "duration": 0.1,
@@ -522,7 +677,7 @@
     },
     "conditions": [
       {
-        "__id__": 31
+        "__id__": 39
       }
     ],
     "duration": 0.1,
@@ -558,7 +713,7 @@
     },
     "conditions": [
       {
-        "__id__": 34
+        "__id__": 42
       }
     ],
     "duration": 0.1,
@@ -580,7 +735,7 @@
     },
     "conditions": [
       {
-        "__id__": 36
+        "__id__": 44
       }
     ],
     "duration": 0.1,
@@ -616,7 +771,7 @@
     },
     "conditions": [
       {
-        "__id__": 39
+        "__id__": 47
       }
     ],
     "duration": 1,
@@ -626,7 +781,7 @@
   },
   {
     "__type__": "cc.animation.TriggerCondition",
-    "trigger": "isDeath"
+    "trigger": "isDead"
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -638,7 +793,7 @@
     },
     "conditions": [
       {
-        "__id__": 41
+        "__id__": 49
       }
     ],
     "duration": 0.1,
@@ -660,7 +815,7 @@
     },
     "conditions": [
       {
-        "__id__": 43
+        "__id__": 51
       }
     ],
     "duration": 0.1,
@@ -682,7 +837,7 @@
     },
     "conditions": [
       {
-        "__id__": 45
+        "__id__": 53
       }
     ],
     "duration": 0.3,
@@ -704,10 +859,10 @@
     },
     "conditions": [
       {
-        "__id__": 47
+        "__id__": 55
       }
     ],
-    "duration": 0.1,
+    "duration": 0.05,
     "relativeDuration": false,
     "exitConditionEnabled": true,
     "_exitCondition": 0
@@ -720,6 +875,190 @@
     "__type__": "cc.animation.AnimationTransition",
     "from": {
       "__id__": 22
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [],
+    "duration": 0.1,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 5
+    },
+    "to": {
+      "__id__": 24
+    },
+    "conditions": [
+      {
+        "__id__": 58
+      }
+    ],
+    "duration": 1,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 5,
+    "lhs": {
+      "__id__": 59
+    },
+    "rhs": {
+      "__id__": 60
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "walkSpeed",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0.5
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 24
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [
+      {
+        "__id__": 62
+      }
+    ],
+    "duration": 0.1,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.BinaryCondition",
+    "operator": 3,
+    "lhs": {
+      "__id__": 63
+    },
+    "rhs": {
+      "__id__": 64
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "walkSpeed",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 0.5
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 5
+    },
+    "to": {
+      "__id__": 26
+    },
+    "conditions": [
+      {
+        "__id__": 66
+      }
+    ],
+    "duration": 0.7,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "attack1"
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 5
+    },
+    "to": {
+      "__id__": 28
+    },
+    "conditions": [
+      {
+        "__id__": 68
+      }
+    ],
+    "duration": 0.7,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "attack2"
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 5
+    },
+    "to": {
+      "__id__": 30
+    },
+    "conditions": [
+      {
+        "__id__": 70
+      }
+    ],
+    "duration": 0.6,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.TriggerCondition",
+    "trigger": "attack3"
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 26
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [],
+    "duration": 0.1,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 28
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": [],
+    "duration": 0.1,
+    "relativeDuration": false,
+    "exitConditionEnabled": true,
+    "_exitCondition": 0
+  },
+  {
+    "__type__": "cc.animation.AnimationTransition",
+    "from": {
+      "__id__": 30
     },
     "to": {
       "__id__": 6
@@ -759,6 +1098,10 @@
     "__type__": "cc.animation.PlainVariable",
     "_type": 1,
     "_value": false
+  },
+  {
+    "__type__": "cc.animation.TriggerVariable",
+    "_flags": 0
   },
   {
     "__type__": "cc.animation.TriggerVariable",

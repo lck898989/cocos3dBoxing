@@ -31,6 +31,9 @@ export class DamageObject {
     @property({type: CCString,tooltip: "击打特效名称"})
     skillSFXName: string = "x"
 
+    @property({type: CCString,tooltip: "动作引发的敌人身上的动画触发器"})
+    public enemyTrigger: string = 'punch1';
+
     @property({type: CCBoolean,tooltip: "该技能是否能够击倒敌人"})
     knockdown: boolean = false;
     

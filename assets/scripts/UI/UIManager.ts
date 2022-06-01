@@ -92,7 +92,7 @@ export class UIManager extends BaseComp {
         .show()
         .delay(0.5)
         .call(() => {
-            playAudio && GameManager.I.audioManager.playEffectByUrl('ButtonStart');
+            playAudio && GameManager.I.audioManager.playEffectByUrl('HandPointer');
         })
         .hide()
         .delay(0.5)

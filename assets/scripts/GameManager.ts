@@ -3,6 +3,7 @@ import { AudioManager } from './AudioManager';
 import { ShakeCamera } from './camera/ShakeCamera';
 import { CollisionConst } from './CollisionConst';
 import { EnemyManager } from './enemy/EnemyManager';
+import { PlayerCombat } from './player/PlayerCombat';
 import { UIManager } from './UI/UIManager';
 const { ccclass, property } = _decorator;
 
@@ -56,6 +57,8 @@ export class GameManager extends Component {
     public ground: geometry.AABB = null;
     public groundCollider: BoxCollider = null;
 
+    public player: Node = null;
+
 
     __preload() {
         GameManager.I = this;
@@ -66,6 +69,7 @@ export class GameManager extends Component {
         this.audioManager && this.audioManager.init();
         this.enemeyManager = this.node.getChildByName('enemys').getComponent(EnemyManager);
         this.UIManager = this.node.getComponentInChildren(UIManager);
+        this.player = this.node.getComponentInChildren(PlayerCombat).node;
         
     }
 

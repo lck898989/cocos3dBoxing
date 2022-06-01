@@ -41,10 +41,16 @@
       },
       {
         "__id__": 143
+      },
+      {
+        "__id__": 145
+      },
+      {
+        "__id__": 151
       }
     ],
     "_prefab": {
-      "__id__": 145
+      "__id__": 153
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -3643,7 +3649,6 @@
     "__type__": "6d74cMxLRxNkrSJ4Yov1UJB",
     "_name": "",
     "_objFlags": 0,
-    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -3654,6 +3659,7 @@
     "health": {
       "__id__": 142
     },
+    "isPlayer": false,
     "_id": ""
   },
   {
@@ -3681,6 +3687,137 @@
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "13gB26DOJCyZ2LqnZJQA7X"
+  },
+  {
+    "__type__": "a44f0OaemFLiqpoh0xoqM85",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 146
+    },
+    "health": {
+      "__id__": 147
+    },
+    "isPlayer": false,
+    "attackList": [
+      {
+        "__id__": 148
+      },
+      {
+        "__id__": 149
+      },
+      {
+        "__id__": 150
+      }
+    ],
+    "isPickAttackRandom": true,
+    "userAI": false,
+    "hitZRange": 2,
+    "defendChance": 0,
+    "hitRecoveryTime": 0.5,
+    "attackDistance": 1.4,
+    "closeDistance": 2,
+    "midDistance": 3,
+    "farDistance": 4.5,
+    "walkSpeed": 1.9,
+    "walkBackSpeed": 1.2,
+    "sighDistance": 10,
+    "attackInterval": 1.2,
+    "knockdownTimeout": 0,
+    "knockdownUpForce": 5,
+    "knockbackForce": 2,
+    "enemyTactic": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "13DFltathNxoyzKshysr8x"
+  },
+  {
+    "__type__": "HealthSystem",
+    "_blood": 100
+  },
+  {
+    "__type__": "DamageObject",
+    "damage": 20,
+    "duration": 0.7,
+    "resetTime": 0.8,
+    "collHeight": 1.2,
+    "collSize": 1,
+    "collDistance": 1,
+    "damageName": "attack1",
+    "animTrigger": "attack1",
+    "skillSFXName": "x",
+    "enemyTrigger": "hit1",
+    "knockdown": false
+  },
+  {
+    "__type__": "DamageObject",
+    "damage": 30,
+    "duration": 0.6,
+    "resetTime": 0.8,
+    "collHeight": 1.2,
+    "collSize": 1,
+    "collDistance": 1,
+    "damageName": "attack2",
+    "animTrigger": "attack2",
+    "skillSFXName": "x",
+    "enemyTrigger": "hit2",
+    "knockdown": true
+  },
+  {
+    "__type__": "DamageObject",
+    "damage": 40,
+    "duration": 0.7,
+    "resetTime": 0.8,
+    "collHeight": 0.8,
+    "collSize": 1.3,
+    "collDistance": 1,
+    "damageName": "attack3",
+    "animTrigger": "attack3",
+    "skillSFXName": "x",
+    "enemyTrigger": "",
+    "knockdown": false
+  },
+  {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 152
+    },
+    "playOnLoad": false,
+    "_clips": [
+      {
+        "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@98afd",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@d91e8",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@348fe",
+        "__expectedType__": "cc.AnimationClip"
+      }
+    ],
+    "_defaultClip": {
+      "__uuid__": "bcb81354-e84f-4426-bbe8-0deb382e9391@348fe",
+      "__expectedType__": "cc.AnimationClip"
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "62iyZxu2VCz7arFUOZqQGa"
   },
   {
     "__type__": "cc.PrefabInfo",
